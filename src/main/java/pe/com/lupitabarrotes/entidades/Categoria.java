@@ -30,7 +30,7 @@ public class Categoria implements Serializable {
 	@Column(name = "nomcat")
 	private String nombrecat;
 	
-	@Column(name = "desccat")
+	@Column(name = "descat")
 	private String descripcioncat;
 	
 	@Column(name = "estcat")

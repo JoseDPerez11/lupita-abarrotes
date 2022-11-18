@@ -28,10 +28,10 @@ public class Rol implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int idRol;
 	
-	@Column(name = "nomcat")
+	@Column(name = "nomrol")
 	private String nombrerol;
 	
-	@Column(name = "descrol")
+	@Column(name = "desrol")
 	private String descripcionrol;
 	
 	@Column(name = "estrol")

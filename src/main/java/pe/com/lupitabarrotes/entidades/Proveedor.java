@@ -30,7 +30,7 @@ public class Proveedor implements Serializable {
 	@Column(name = "nomprov")
 	private String nombreprov;
 	
-	@Column(name = "dirprov")
+	@Column(name = "direccion")
 	private String direccionprov;
 	
 	@Column(name = "telprov")
