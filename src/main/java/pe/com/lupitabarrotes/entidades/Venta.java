@@ -45,5 +45,5 @@ public class Venta implements Serializable  {
 	private double totalven;
 	
 	@Column(name = "estven")
-	private String estadoven;
+	private boolean estadoven;
 }
