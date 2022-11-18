@@ -16,38 +16,35 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-@Entity(name="DetalleVenta")
-@Table(name ="detalleVenta")
+@Entity(name = "DetalleVenta")
+@Table(name = "detalleVenta")
 public class DetalleVenta implements Serializable {
-	private static final long serialVersionUID=1L;
-	@Id
-	@Column(name = "iddetalleventa")
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int idDetalleventa;
-	
-	@Column(name = "cantdv")
-	private int cantidaddv;
-	
-	@Column(name = "predv")
-	private double preciodv;
-	
-	@Column(name = "descdv")
-	private double descuentodv;
-	
-	@ManyToOne
+
+    private static final long serialVersionUID = 1L;
+    @Id
+    @Column(name = "iddetalleventa")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int idDetalleventa;
+
+    @Column(name = "cantdv")
+    private int cantidaddv;
+
+    @Column(name = "predv")
+    private double preciodv;
+
+    @Column(name = "descdv")
+    private double descuentodv;
+
+    @ManyToOne
     @JoinColumn(name = "idventa", nullable = false)
     private Venta venta;
 
-	@ManyToOne
-	@JoinColumn(name = "idproducto", nullable = false)
-	private Producto producto;
-	
+    @ManyToOne
+    @JoinColumn(name = "idproducto", nullable = false)
+    private Producto producto;
+
 }
-
-
-

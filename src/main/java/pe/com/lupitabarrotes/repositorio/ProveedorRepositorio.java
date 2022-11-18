@@ -9,6 +9,6 @@ import pe.com.lupitabarrotes.entidades.Proveedor;
 
 public interface ProveedorRepositorio extends JpaRepository<Proveedor, Integer>{
 
-	@Query("select p from Proveedor p where p.estado='registrado'")
+    @Query("select p from Proveedor p where p.estadoprov='registrado'")
     List<Proveedor> findAllCustom();
 }

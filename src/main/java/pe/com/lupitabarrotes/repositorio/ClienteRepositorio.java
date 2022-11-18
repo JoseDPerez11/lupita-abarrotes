@@ -10,7 +10,7 @@ import pe.com.lupitabarrotes.entidades.Cliente;
 
 public interface ClienteRepositorio extends JpaRepository<Cliente, Integer>{
 
-	@Query("select p from Cliente p where p.estado=1")
+    @Query("select c from Cliente c where c.estadocli=1")
     List<Cliente> findAllCustom(); 
 
 }

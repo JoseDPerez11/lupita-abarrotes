@@ -18,6 +18,7 @@ import pe.com.lupitabarrotes.services.ClienteServicio;
 @RestController
 @RequestMapping("/cliente")
 public class ClienteController {
+    
     @Autowired
     private ClienteServicio clienteServicio;
     
