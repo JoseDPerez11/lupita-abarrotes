@@ -8,7 +8,7 @@ import pe.com.lupitabarrotes.entidades.Cliente;
 
 public interface ClienteServicio {
 
-	public List<Cliente> findAll();
+    public List<Cliente> findAll();
     
     public List<Cliente> findAllCustom();
     

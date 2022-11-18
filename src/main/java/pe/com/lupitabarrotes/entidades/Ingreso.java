@@ -21,39 +21,40 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-@Entity(name="Ingreso")
-@Table(name ="ingreso")
+@Entity(name = "Ingreso")
+@Table(name = "ingreso")
 public class Ingreso implements Serializable {
-	private static final long serialVersionUID=1L;
-	@Id
-	@Column(name = "idingreso")
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int idIngreso;
-	
-	@Column(name = "tipocoming")
-	private String tipocomprobanteing;
-	
-	@Column(name = "numcoming")
-	private String numerocomprobanteing;
-	
-	@Column(name = "fechaing")
-	private Date fechaing;
-	
-	@Column(name = "imping")
-	private double impuestoing;
-	
-	@Column(name = "toting")
-	private double totaling;
-	
-	@Column(name = "esting")
-	private boolean estadoing;
-	
-	@ManyToOne
+
+    private static final long serialVersionUID = 1L;
+    @Id
+    @Column(name = "idingreso")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int idIngreso;
+
+    @Column(name = "tipocoming")
+    private String tipocomprobanteing;
+
+    @Column(name = "numcoming")
+    private String numerocomprobanteing;
+
+    @Column(name = "fechaing")
+    private Date fechaing;
+
+    @Column(name = "imping")
+    private double impuestoing;
+
+    @Column(name = "toting")
+    private double totaling;
+
+    @Column(name = "esting")
+    private boolean estadoing;
+
+    @ManyToOne
     @JoinColumn(name = "idproveedor", nullable = false)
     private Proveedor proveedor;
-	
-	@ManyToOne
-	@JoinColumn(name = "idusuario", nullable = false)
-	private Usuario usuario;
-	
+
+    @ManyToOne
+    @JoinColumn(name = "idusuario", nullable = false)
+    private Usuario usuario;
+
 }

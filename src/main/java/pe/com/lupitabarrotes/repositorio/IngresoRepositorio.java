@@ -8,6 +8,6 @@ import pe.com.lupitabarrotes.entidades.Ingreso;
 
 public interface IngresoRepositorio  extends JpaRepository<Ingreso, Integer>{
     
-    @Query("select i from Ingreso where i.estadoing='1'")
+    @Query("select i from Ingreso i where i.estadoing=1")
     List<Ingreso>findAllCustom();
 }

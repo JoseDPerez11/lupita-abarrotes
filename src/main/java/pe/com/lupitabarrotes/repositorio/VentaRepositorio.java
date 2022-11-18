@@ -7,7 +7,7 @@ import pe.com.lupitabarrotes.entidades.Venta;
 
 public interface VentaRepositorio extends JpaRepository<Venta, Integer>{
     
-    @Query("select v from Venta v where v.estadoven='1'")
+    @Query("select v from Venta v where v.estadoven=1")
     List<Venta> findAllCustom();
     
 }
