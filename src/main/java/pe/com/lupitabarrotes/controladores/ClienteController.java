@@ -54,4 +54,5 @@ public class ClienteController {
         objcliente.setEstadocli(false);
         return clienteServicio.delete(Cliente.builder().idCliente(id).build());
     }
+    
 }
