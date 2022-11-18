@@ -46,7 +46,7 @@ public class Ingreso implements Serializable {
 	private double totaling;
 	
 	@Column(name = "esting")
-	private String estadoing;
+	private boolean estadoing;
 	
 	@ManyToOne
     @JoinColumn(name = "idproveedor", nullable = false)
